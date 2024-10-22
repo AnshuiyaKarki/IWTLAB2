@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        nav {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #007BFF;
+            border-radius: 5px;
+        }
+        nav button {
+            background-color: white;
+            color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #e0e0e0;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h4 {
+            color: #555;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .box {
+            border: 1px solid #007BFF;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #e9f5ff;
+        }
+        .list {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <button onclick="showSection('main')">Main</button>
+    <button onclick="showSection('audi')">Audi</button>
+    <button onclick="showSection('cplus')">C++</button>
+    <button onclick="showSection('insta')">Instagram</button>
+    <button onclick="showSection('kfc')">KFC</button>
+</nav>
+
+<div class="section" id="main" style="display: block;">
+    <h1>Assignment 4</h1>
+    <a href="table.html" target="_blank">Click here to view the assignment</a>
+</div>
+
+<div class="section" id="audi">
+    <h1>Audi</h1>
+    <div class="box">
+        <h4>This is the world's number one car selling company. We have many varieties of cars that are highly secure and luxurious.</h4>
+        <h3>To visit our official company website:</h3>
+        <a href="https://www.audi.in/in/web/en.html" target="_blank">Official website</a>
+        <!-- PUT HERE PIC OF AUDI -->
+        <img src="audi.jpg" alt="Audi Car">
+    </div>
+</div>
+
+<div class="section" id="cplus">
+    <h1>C++</h1>
+    <div class="box">
+        <h4>This is a high-level language used by many programmers and is widely popular.</h4>
+        <img src="cplusplus.jpg" alt="C++ Programming">
+    </div>
+</div>
+
+<div class="section" id="insta">
+    <h1>Instagram</h1>
+    <div class="box">
+        <h4>Instagram is a popular social media app with millions of users and lakhs of active users.</h4>
+        <img src="instagram.jpg" alt="Instagram Logo">
+    </div>
+</div>
+
+<div class="section" id="kfc">
+    <h1>KFC</h1>
+    <div class="box">
+        <h4>KFC is highly popular for fried chicken. We provide quality and tasty items.</h4>
+        <h3>For more information, visit our official website:</h3>
+        <a href="https://online.kfc.co.in" target="_blank">Official website</a>
+        <img src="kfc.jpg" alt="KFC Chicken">
+    </div>
+</div>
+
+<div class="section list">
+    <h1>Additional Information</h1>
+    <ul>
+        <li>Item 1: Description of item 1</li>
+        <li>Item 2: Description of item 2</li>
+        <li>Item 3: Description of item 3</li>
+    </ul>
+</div>
+
+<div class="section table-container">
+    <h1>Sample Table</h1>
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Item 1</td>
+            <td>Description of item 1</td>
+        </tr>
+        <tr>
+            <td>Item 2</td>
+            <td>Description of item 2</td>
+        </tr>
+        <tr>
+            <td>Item 3</td>
+            <td>Description of item 3</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => section.style.display = 'none');
+        
+        // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

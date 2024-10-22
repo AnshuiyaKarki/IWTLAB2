@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations and Slideshow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .slideshow {
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .button {
+            background-color: #004d99;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+        .button:hover {
+            background-color: #003d80;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arithmetic Operations</h1>
+        <button class="button" onclick="add(5, 3)">Add 5 + 3</button>
+        <button class="button" onclick="subtract(5, 3)">Subtract 5 - 3</button>
+        <button class="button" onclick="multiply(5, 3)">Multiply 5 * 3</button>
+        <button class="button" onclick="divide(5, 3)">Divide 5 / 3</button>
+        <div id="result"></div>
+        
+        <h1>Image Slideshow</h1>
+        <div class="slideshow">
+            <img src="image1.jpg" class="slides active" alt="Image 1">
+            <img src="image2.jpg" class="slides" alt="Image 2"> 
+            <img src="image3.jpg" class="slides" alt="Image 3"> 
+        </div>
+        <button class="button" onclick="nextSlide()">Next Slide</button>
+    </div>
+
+    <script>
+        // Arithmetic Operations
+        function add(a, b) {
+            displayResult(a + b);
+        }
+
+        function subtract(a, b) {
+            displayResult(a - b);
+        }
+
+        function multiply(a, b) {
+            displayResult(a * b);
+        }
+
+        function divide(a, b) {
+            if (b !== 0) {
+                displayResult(a / b);
+            } else {
+                displayResult("Cannot divide by zero!");
+            }
+        }
+
+        function displayResult(result) {
+            document.getElementById('result').textContent = "Result: " + result;
+        }
+
+        // Image Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Automatic Slideshow
+        setInterval(nextSlide, 3000); // Change image every 3 seconds
+    </script>
+</body>
+</html>

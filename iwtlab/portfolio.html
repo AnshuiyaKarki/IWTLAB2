@@ -1,0 +1,122 @@
+  <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My Portfolio Page showcasing various HTML tags and styling.">
+    <title>My Portfolio</title>
+    <link rel="icon" href="https://www.example.com/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light sky blue */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcccb; /* Baby pink */
+            color: #333;
+            text-align: center;
+            padding: 1em;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #ff69b4; /* Hot pink */
+        }
+        p {
+            line-height: 1.6;
+        }
+        .moving-text {
+            font-size: 1.5em;
+            color: #ff4500; /* Orange-red */
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            animation: move-text 10s linear infinite;
+        }
+        @keyframes move-text {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ff69b4; /* Hot pink */
+            margin: 1em 0;
+        }
+        pre {
+            background-color: #e6e6fa; /* Lavender */
+            padding: 1em;
+            border-radius: 5px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .strikethrough {
+            text-decoration: line-through;
+        }
+        ul, ol {
+            margin: 1em 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <div class="moving-text">Welcome to my portfolio</div>
+    </header>
+
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm <b>Anshuiya Karki</b>, a passionate web developer. Here's a quick overview of what you can find on my portfolio:</p>
+
+        <h3>Skills</h3>
+        <ul>
+            <li><b>HTML</b> - Building the structure of webpages</li>
+            <li><i>CSS</i> - Styling and layout of webpages</li>
+            <li><u>JavaScript</u> - Adding interactivity to webpages</li>
+        </ul>
+
+        <h4>Experience</h4>
+        <ol>
+            <li>Web Developer at <b>Google</b></li>
+            <li>Freelancer - Web Design and Development</li>
+        </ol>
+
+        <h5>Education</h5>
+        <p>I have a degree in <sub>Computer Science</sub> from <b>National Institute of Technology,Meghalaya</b>.</p>
+
+        <h6>Contact</h6>
+        <p>Feel free to reach out to me via email: <a href="anshuiyakarki01@gmail.com">anshuiyakarki01@gmail.com</a></p>
+
+        <hr>
+
+        <pre>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Code</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+</body>
+</html>
+        </pre>
+Here is a picture of me!
+<br><br>
+<img src="photo.jpeg" alt="my picture" height="100" width="100">
+        <p>Here's some <b>bold</b> text, <i>italic</i> text, <u>underlined</u> text, and <strike>strikethrough</strike> text.</p>
+        <p>Also some <del>deleted</del> text for demonstration.</p>
+    </div>
+</body>
+</html>
